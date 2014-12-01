@@ -3,7 +3,7 @@ class nrsysmond::repo::debian (
 ) inherits nrsysmond::params {
   file { '/etc/apt/sources.list.d/newrelic.list':
     ensure => present,
-    content => "deb ${apt_repo} newrelic non-free",
+    content => "deb ${apt_repo} newrelic non-free\n",
   }
 
   exec { 'load apt key':
